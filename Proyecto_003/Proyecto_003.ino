@@ -80,6 +80,16 @@ void controlPulsadores() {
   boolean _dchoStatus = digitalRead(pinSwtDcho);
   boolean _onOfStatus = digitalRead(pinSwtOnOf);
 
+  //Control de estado encendido
+  if(_onOfStatus){
+    // Pulsado
+    if(_prevOnOfStatus){
+      // Modo de luz
+      // control de tiempo pulsado      
+    }else{
+      _prevOnOfStatus = true;
+    }
+  }
 
   // Control estado intermitentes
   if ((_izdoStatus ^ _dchoStatus) || (_izdoStatus ^ _dchoStatus)) {
